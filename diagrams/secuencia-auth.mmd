@@ -1,0 +1,20 @@
+sequenceDiagram
+    autonumber
+    actor Estudiante as Estudiante UNI
+    participant Client as Single Page Application (Angular)
+    participant AuthAPI as API Gateway / Auth Controller
+    participant ThesisAPI as Thesis Controller / Command Service
+    participant Storage as Cloud/Blob Storage
+    participant DB as SQLite Database
+
+    Estudiante->>Client: 1. Ingresa credenciales (UNI ID & Password)
+    Client->>AuthAPI: 2. POST /api/v1/auth/login
+    AuthAPI->>DB: 3. Validar credenciales e identidad
+    DB-->>AuthAPI: 4. Usuario válido
+    AuthAPI-->>Client: 5. JWT Token (access + refresh)
+    Client->>ThesisAPI: 6. POST /api/v1/theses (Bearer JWT)
+    ThesisAPI->>Storage: 7. Subir PDF
+    Storage-->>ThesisAPI: 8. URL del documento
+    ThesisAPI->>DB: 9. Persistir metadatos
+    DB-->>ThesisAPI: 10. OK
+    ThesisAPI-->>Client: 11. 201 Created

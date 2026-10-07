@@ -1,0 +1,11 @@
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\bin\Debug\net8.0\SistesisUni.Core.Domain.deps.json
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\bin\Debug\net8.0\SistesisUni.Core.Domain.dll
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\bin\Debug\net8.0\SistesisUni.Core.Domain.pdb
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\SistesisUni.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\SistesisUni.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\SistesisUni.Core.Domain.AssemblyInfo.cs
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\SistesisUni.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\SistesisUni.Core.Domain.dll
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\refint\SistesisUni.Core.Domain.dll
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\SistesisUni.Core.Domain.pdb
+C:\Users\vguti\Downloads\SISTESIS-UNI\src\SistesisUni.Core.Domain\obj\Debug\net8.0\ref\SistesisUni.Core.Domain.dll

@@ -1,0 +1,18 @@
+graph TD
+    subgraph Contexto["System Boundary"]
+        SISTESIS[SISTESIS-UNI System]
+    end
+    Estudiante[Estudiante UNI<br/>Somete protocolos y propuestas]
+    Docente[Docente / Tutor<br/>Revisor y evaluador]
+    Admin[Administrador TIC<br/>Gestiona usuarios y roles]
+    SIAT[SIAT UNI<br/>Control Académico Central]
+    Notif[Servicio de Notificaciones<br/>SMTP UNI]
+
+    Estudiante -->|Envía protocolos| SISTESIS
+    Docente -->|Revisa y aprueba| SISTESIS
+    Admin -->|Configura periodos| SISTESIS
+    SISTESIS -->|Sincroniza matrícula| SIAT
+    SISTESIS -->|Envía avisos| Notif
+
+    style SISTESIS fill:#f1f5f9,stroke:#475569,stroke-width:2px,color:#0f172a
+    style Contexto stroke:#cbd5e1,stroke-dasharray: 5 5

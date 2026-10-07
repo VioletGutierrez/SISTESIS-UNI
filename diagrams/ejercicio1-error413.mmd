@@ -1,0 +1,13 @@
+sequenceDiagram
+    autonumber
+    actor Estudiante
+    participant Client as Web App
+    participant API as Thesis API
+    participant MW as Middleware Validación
+
+    Estudiante->>Client: Adjunta archivo PDF (> 15MB)
+    Client->>API: POST /api/v1/theses/upload (Multipart Form Data)
+    API->>MW: Validar File Size Limit
+    MW-->>API: Rechazado (15MB excedido)
+    API-->>Client: 413 Payload Too Large (JSON Error Detail)
+    Client-->>Estudiante: "El archivo excede el límite de 15MB"

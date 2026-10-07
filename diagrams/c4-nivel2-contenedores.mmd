@@ -1,0 +1,22 @@
+graph TB
+    subgraph SISTESIS["SISTESIS-UNI Boundary"]
+        SPA[Single Page Application<br/>Angular / TypeScript]
+        MobileApp[Aplicación Móvil<br/>Flutter]
+        API[API RESTful backend<br/>ASP.NET Core 8 / C#]
+        DB[(SQLite Database<br/>Metadatos)]
+        Blob[(MinIO / S3<br/>Documentos PDF)]
+    end
+    SIAT_Ext[SIAT UNI API]
+    SMTP_Ext[Servidor SMTP UNI]
+
+    Estudiante -->|HTTPS / WSS| SPA
+    Docente -->|HTTPS / WSS| SPA
+    Estudiante -->|HTTPS| MobileApp
+    SPA -->|JSON / HTTPS| API
+    MobileApp -->|JSON / HTTPS| API
+    API -->|EF Core| DB
+    API -->|S3 SDK| Blob
+    API -->|REST / HTTPS| SIAT_Ext
+    API -->|SMTP| SMTP_Ext
+
+    style API fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a

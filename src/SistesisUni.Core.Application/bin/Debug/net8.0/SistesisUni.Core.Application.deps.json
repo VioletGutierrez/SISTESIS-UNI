@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SistesisUni.Core.Application/1.0.0": {
+        "dependencies": {
+          "SistesisUni.Core.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SistesisUni.Core.Application.dll": {}
+        }
+      },
+      "SistesisUni.Core.Domain/1.0.0": {
+        "runtime": {
+          "SistesisUni.Core.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistesisUni.Core.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SistesisUni.Core.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

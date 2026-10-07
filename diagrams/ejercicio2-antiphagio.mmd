@@ -1,0 +1,25 @@
+graph TB
+    subgraph SISTESIS["SISTESIS-UNI Boundary"]
+        SPA[Single Page Application<br/>Angular]
+        API[API RESTful backend<br/>ASP.NET Core 8]
+        DB[(SQLite / PostgreSQL)]
+        Blob[(MinIO / S3)]
+        RMQ[[RabbitMQ<br/>Message Broker]]
+        Plag[PlagiarismCheckerEngine<br/>Python / FastAPI]
+    end
+
+    SPA -->|JSON / HTTPS| API
+    API -->|EF Core| DB
+    API -->|S3 SDK| Blob
+    API -->|Publica thesis.uploaded| RMQ
+    RMQ -->|Consume evento| Plag
+    Plag -->|Descarga PDF| Blob
+    Plag -->|Analiza similitud| Plag
+    Plag -->|Actualiza estado| DB
+    Plag -->|Publica thesis.analyzed| RMQ
+    RMQ -->|Notifica| API
+    API -->|WebSocket / SSE| SPA
+
+    style API fill:#f8fafc,stroke:#334155,stroke-width:2px
+    style Plag fill:#fef3c7,stroke:#b45309,stroke-width:2px
+    style RMQ fill:#ede9fe,stroke:#6d28d9,stroke-width:2px
